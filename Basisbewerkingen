@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>4 Basisbewerkingen</h2>    
+<p>Optellen, aftrekken, vermenigvuldigen, delen : 20 en 10</p>
+<p id="optellen"></p>
+<p id="aftrekken"></p>
+<p id="vermenigvuldigen"></p>
+<p id="delen"></p>
+<script>
+    function optellen(p1,p2){
+        return p1 + p2;
+    }
+    document.getElementById("optellen").innerHTML = optellen(20,10);
+    function aftrekken(p3,p4){
+        return p3 - p4;
+    }
+    document.getElementById("aftrekken").innerHTML= aftrekken(20,10);
+    function vermenigvuldigen(p5,p6){
+        return p5 * p6;
+    }
+    document.getElementById("vermenigvuldigen").innerHTML= vermenigvuldigen(20,10);
+     function delen(p7,p8){
+        return p7 / p8;
+    }
+    document.getElementById("delen").innerHTML= delen(20,10);
+    
+    </script>    
+</body>
+</html>
