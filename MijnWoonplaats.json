@@ -1,0 +1,59 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Woluwe-Saint-Lambert",
+               "short_name" : "Woluwe-St.-Lambert",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Brussels",
+               "short_name" : "Brussels",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Belgium",
+               "short_name" : "BE",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "1200",
+               "short_name" : "1200",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "1200 Woluwe-Saint-Lambert, Belgium",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 50.86321,
+                  "lng" : 4.4617001
+               },
+               "southwest" : {
+                  "lat" : 50.83382,
+                  "lng" : 4.3999099
+               }
+            },
+            "location" : {
+               "lat" : 50.8489094,
+               "lng" : 4.4320883
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 50.86321,
+                  "lng" : 4.4617001
+               },
+               "southwest" : {
+                  "lat" : 50.83382,
+                  "lng" : 4.3999099
+               }
+            }
+         },
+         "place_id" : "ChIJn_DuA1nbw0cRQtv8Zckaajw",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}
