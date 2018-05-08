@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html>
-<title>SupermanRunner</title>
-
+<head>
 <style>
     body{
-        margin: 0;
+        background-color: aliceblue;
+        border-bottom: 0;
+        width:1000px;
+   margin:0 auto;
+        overflow: hidden;
+white-space: nowrap;
     }
-    .spelzone{
-        position: relative;
-        width: 100%;
-        height: 90vh;
-        left: 0%;
-        margin-top: 20px;
-        background-color: #001a4d;
-    }
+   
     .clark{
         position: absolute;
         height: 60px;
@@ -57,38 +54,99 @@
         left: 60%;
         border-radius: 5px 0px 0px 5px;
     }
-   
+    
+#wolken {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    -webkit-animation: mymove 10s infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate-reverse; /* Safari 4.0 - 8.0 */
+    animation: mymove 3s infinite;
+    animation-iteration-count: infinite;
+    float: left;
+}
+
+/* Safari 4.0 - 8.0 */
+    #div1 {-webkit-animation-timing-function: linear;}
+#div2 {-webkit-animation-timing-function: ease;margin-left: 200px}
+#div3 {-webkit-animation-timing-function: ease-in;margin-left: 30px}
+    #div4 {-webkit-animation-timing-function: ease-out;margin-left: 700px}
+#div5 {-webkit-animation-timing-function: ease-in-out;margin-left: 500px}
+#div6 {-webkit-animation-timing-function: ease;margin-left: 10px}
+#div7 {-webkit-animation-timing-function: ease-out;margin-left: 600px}
+#div8 {-webkit-animation-timing-function: ease-in-out;margin-left: 20px}
+
+/* Standard syntax */
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+#div6 {-webkit-animation-timing-function: ease;}
+#div7 {-webkit-animation-timing-function: ease-in;}
+#div8 {-webkit-animation-timing-function: ease;}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {bottom: 0px;}
+    to {bottom: 0px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 500px;}
+}
+    img{
+        height: 200px;
+        
+    }
 </style>
-<body>
+</head>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script >
+//De speler laten bewegen
 $(document).keydown(function(e){
     switch (e.which){
-    case 37:    //left arrow key
-        $(".clark").finish().animate({
-            left: "-=8"
+    case 37:    //links
+        $(".clark").finish().animate(
+            
+            {
+            left: "-=15"
         });
         break;
-    case 38:    //up arrow key
+    case 38:    //boven
         $(".clark").finish().animate({
-            top: "-=8"
+            top: "-=15"
         });
         break;
-    case 39:    //right arrow key
+    case 39:    //rechts
         $(".clark").finish().animate({
-            left: "+=8"
+            left: "+=15"
         });
         break;
-    case 40:    //bottom arrow key
+    case 40:    //beneden
         $(".clark").finish().animate({
-            top: "+=8"
+            top: "+=15"
         });
         break;
     }
 });
+
 </script>
-<br>
-<div class="spelzone">
+<body>
+
+
+<div id="wolken">
+<div id="div1" class="wolken"><img src="clouds2.png"></div>
+<div id="div2"class="wolken"><img src="clouds2.png"></div>
+<div id="div3"class="wolken"><img src="clouds2.png"></div>
+<div id="div4"class="wolken"><img src="clouds2.png"></div>
+<div id="div5"class="wolken"><img src="clouds2.png"></div>
+<div id="div6"class="wolken"><img src="clouds2.png"></div>
+<div id="div7"class="wolken"><img src="clouds2.png"></div>
+<div id="div8"class="wolken"><img src="clouds2.png"></div>
+</div>
 <div class="clark" id="clark">
 <div class="linkerarm"></div>
 <div class="rechterarm"></div>
@@ -96,6 +154,5 @@ $(document).keydown(function(e){
 <div class="rechterbeen"></div>
 </div>
 
-</div>
 </body>
 </html>
