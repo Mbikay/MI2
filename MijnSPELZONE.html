@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     body{
         background-color:  #002966;
-        border-bottom: 0;
-        width:1000px;
-        overflow: hidden;
+        width:100%;
+        overflow:hidden;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        
+        
     }
    
     .clark{
-        position: absolute;
+        position: fixed;
         height: 100px;
         width: 40px;
         border-radius: 5px;
         background-image: url('supermancape.png');
+        height: stretch;
+        transform: rotate(270deg);
     }
     .hoofd{
         background-color: black;
@@ -79,40 +86,51 @@
     }
     
 #wolken {
-    position: relative;
-    -webkit-animation: mymove 50s infinite; /* Safari 4.0 - 8.0 */
-    -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
-    animation: mymove 60s infinite;
-    animation-iteration-count: infinite;
+    position: fixed;
+    -webkit-animation: mymove 5s linear infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 2  infinite;
+    animation-iteration-count:;
     float:left;
-    margin-left: 500px;
+    -moz-animation: mymove 15s linear infinite;
+	-o-animation: mymove 15s linear infinite;
+
 }
 
 /* Safari 4.0 - 8.0 */
-    #div1 {-webkit-animation-timing-function: ease;margin-left: -80px}
-#div2 {-webkit-animation-timing-function: ease;margin-left: -400px}
-#div3 {-webkit-animation-timing-function: ease-in;margin-left: 400px}
+#div1 {-webkit-animation-timing-function: ease;margin-left: -900px;margin-top: -50px}
+#div2 {-webkit-animation-timing-function: ease;margin-left: 500px;margin-top: -400px;}
+#div3 {-webkit-animation-timing-function: ease-in;margin-left: 200px;margin-top: -400px}
+#div4 {-webkit-animation-timing-function: ease;margin-left: 800px;margin-top: -400px;}
+#div5 {-webkit-animation-timing-function: ease;margin-left: -200px;margin-top: -400px;}
+#div6 {-webkit-animation-timing-function: ease-in;margin-left: 600px;margin-top: -400px;}
+#div7 {-webkit-animation-timing-function: ease;margin-left: -200px;margin-top: -400px;}
+#div8 {-webkit-animation-timing-function: ease;margin-left: 500px;margin-top: -400px;}
 
 
 /* Standard syntax */
 #div1 {animation-timing-function: ease;}
 #div2 {animation-timing-function: ease;}
 #div3 {animation-timing-function:ease-in;}
+    #div4 {animation-timing-function: ease;}
+#div5 {animation-timing-function: ease;}
+#div6 {animation-timing-function:ease-in;}
+    #div7 {animation-timing-function: ease;}
+#div8 {animation-timing-function: ease;}
 
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes mymove {
-    from {bottom: 0px;}
-    to {bottom: 0px;}
+    from {left: 0px;}
+    to {left: 0px;}
 }
 
 /* Standard syntax */
 @keyframes mymove {
-    from {top: 0px;}
-    to {top: 1000px;}
+    from {left: 0px;}
+    to {left: 100%;}
 }
     #wolk1{
-        height: 600px;
+        height: 500px;
         
     }
 </style>
@@ -126,35 +144,48 @@ $(document).keydown(function(e){
         $(".clark").finish().animate(
             
             {
-            left: "-=15"
+            left: "-=20"
         });
         break;
     case 38:    //boven
-        $(".clark").finish().animate({
-            top: "-=15"
-        });
+            
+            if(parseInt($("#clark").css("top"))>0){
+              $(".clark").finish().animate({
+            top: "-=20"
+        });  
+            }
+        
         break;
     case 39:    //rechts
         $(".clark").finish().animate({
-            left: "+=15"
+            left: "+=20"
         });
         break;
     case 40:    //beneden
-        $(".clark").finish().animate({
-            top: "+=15"
+                if(parseInt($("#clark").css("bottom"))>0){
+              $(".clark").finish().animate({
+            top: "+=20"
         });
-        break;
+                }
+       
     }
 });
 
+
 </script>
-<body>
+<body >
 
 
 <div id="wolken">
 <div id="div1" class="wolken"><img src="clouds2.png" id="wolk1"></div>
 <div id="div2"class="wolken"><img src="clouds2.png"id="wolk1"></div>
 <div id="div3"class="wolken"><img src="clouds2.png"id="wolk1"></div>
+<div id="div4" class="wolken"><img src="clouds2.png" id="wolk1"></div>
+<div id="div5"class="wolken"><img src="clouds2.png"id="wolk1"></div>
+<div id="div6"class="wolken"><img src="clouds2.png"id="wolk1"></div>
+<div id="div7" class="wolken"><img src="clouds2.png" id="wolk1"></div>
+<div id="div8"class="wolken"><img src="clouds2.png"id="wolk1"></div>
+
 
 
 </div>
