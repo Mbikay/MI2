@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
 <title>SupermanRunner</title>  
 <style>
-    body{
-        margin: 0;
-         background-color:  #66e0ff;
+ html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url('supermanbackground.png.jpg');
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+        }
+    .headerleft{
+        position: absolute;
+        top: 60px;
+        left: 80px;
     }
-    .header{
-        padding: 1em;
-        background-color:  #66e0ff;
-         clear: left;
-    text-align: center;
-        color: white;
+    .footerimg{
+        position: absolute;
+        bottom: 0;
+        left: 80px;
     }
-    .footer{
-        padding: 1em;
-        background-color:  #66e0ff;
-         clear: left;
-    text-align: center;
-position: absolute;        
+    .footerimg2{
+     position: absolute;
+        bottom: 0;
+        right: 80px;   
     }
-   
 </style>
-<div class="header">
-<h1>Superman Runner</h1>
-</div>
-<img src="Supermangif.gif" style="width: 100%;height: 100%">
+</head>
+<body>
+<img src="headerSuperman.png" alt="superman" class="headerimages" style="float: left;width: 30%">
+    <img src="headerRunner.png" alt="superman" class="headerimages" style="float: right;width: 30%">
+<img src="newgame.png" alt="newgame" class="footerimg" style="float: left;width: 30%">
+<img src="tutorial.png" alt="tutorial" class="footerimg2" style="float: right;width: 30%">
+<div></div>
 </body>
 </html>
+    
