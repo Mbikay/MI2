@@ -1,203 +1,450 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
+
     body{
+
         background-color:  #002966;
+
         width:100%;
+
         overflow:hidden;
+
         height: 100%;
+
         margin: 0;
+
         padding: 0;
+
         
+
         
+
     }
+
    
+
     .clark{
+
         position: fixed;
+
         height: 100px;
+
         width: 40px;
+
         border-radius: 5px;
+
         background-image: url('supermancape.png');
+
         height: stretch;
+
         transform: rotate(270deg);
+
     }
+
     .hoofd{
+
         background-color: black;
+
         position: absolute;
+
         height: 15%;
+
         width: 20%;
+
         margin-left: 40%;
+
         top: -10%;
+
         border-radius: 20px 20px 20px 20px;
+
     }
+
     .linkerarm{
+
         position: absolute;
+
         height: 40%;
+
         width: 20%;
+
         margin-left: 10%;
+
         top: -38%;
+
         background-color: blue;
+
     }
+
     .linkerhand{
+
         position: absolute;
+
         height: 10%;
+
         margin-left: 10%;
+
         background-color: bisque;
+
         top: -50%;
+
         width: 20%;
+
         border-radius: 20px 20px 0px 0px;
+
         
+
     }
+
     .rechterarm{
+
         position: absolute;
+
         height: 40%;
+
         width: 20%;
+
         margin-left: 70%;
+
         top: -38%;
+
         background-color: blue;
+
     }
+
       .rechterhand{
+
         position: absolute;
+
         height: 10%;
+
         margin-left: 70%;
+
         background-color: bisque;
+
         top: -50%;
+
         width: 20%;
+
         border-radius: 20px 20px 0px 0px;
+
         
+
     }
+
     .linkerbeen{
+
         position: absolute;
+
         height: 50%;
+
         width: 20%;
+
         background-color: blue;
+
         top: 99%;
+
         left: 20%;
+
     }
+
     .rechterbeen{
+
         position: absolute;
+
         height: 50%;
+
         width: 20%;
+
         background-color: blue;
+
         top: 99%;
+
         left: 60%;
+
     }
+
     
+
 #wolken {
+
     position: fixed;
+
     -webkit-animation: mymove 5s linear infinite; /* Safari 4.0 - 8.0 */
+
     animation: mymove 2  infinite;
+
     animation-iteration-count:;
+
     float:left;
+
     -moz-animation: mymove 15s linear infinite;
+
 	-o-animation: mymove 15s linear infinite;
 
+
+
 }
+    /* Source van dit stuk code : https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_count2 */
+    .monster{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        -webkit-animation-name: monster; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s;
+        /* Safari 4.0 - 8.0*/
+        -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0*/
+        animation-name: monster;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    /* Safari 4.0 - 8.0*/
+    @-webkir-keyframes monster{
+        0% {left: 0px; top: 0px}
+         25% {left: 200px; top: 0px}
+         50% {left: 200px; top: 200px}
+         75% {left: 0px; top: 200px}
+         100% {left: 0px; top: 0px}
+    }
+    /* Standard syntax */
+    @keyframes monster{
+        0% {left: 0px; top: 0px}
+         25% {left: 800px; top: 0px}
+         50% {left: 200px; top: 200px}
+         75% {left: 0px; top: 200px}
+         100% {left: 0px; top: 0px}
+    }
+/* Source van dit stuk code : https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_count2 */
+    .monster2{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        -webkit-animation-name: monster2; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 10s;
+        /* Safari 4.0 - 8.0*/
+        -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0*/
+        animation-name: monster2;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    /* Safari 4.0 - 8.0*/
+    @-webkir-keyframes monster2{
+        0% {right: 0px; top: 0px}
+         25% {right: -500px; top: 200px}
+         50% {right: 200px; top: 200px}
+         75% {right: 0px; top: 200px}
+         100% {right: 0px; top: 0px}
+    }
+    /* Standard syntax */
+    @keyframes monster2{
+        0% {right: 10px; top: -200px}
+         25% {right: -500; top: 200px}
+         50% {right: -400; top: 400px}
+         75% {right: -200px; top: 0px}
+         100% {right: -100px; top: 0px}
+    }
+
 
 /* Safari 4.0 - 8.0 */
+
 #div1 {-webkit-animation-timing-function: ease;margin-left: -900px;margin-top: -50px}
+
 #div2 {-webkit-animation-timing-function: ease;margin-left: 500px;margin-top: -400px;}
+
 #div3 {-webkit-animation-timing-function: ease-in;margin-left: 200px;margin-top: -400px}
+
 #div4 {-webkit-animation-timing-function: ease;margin-left: 800px;margin-top: -400px;}
+
 #div5 {-webkit-animation-timing-function: ease;margin-left: -200px;margin-top: -400px;}
+
 #div6 {-webkit-animation-timing-function: ease-in;margin-left: 600px;margin-top: -400px;}
+
 #div7 {-webkit-animation-timing-function: ease;margin-left: -200px;margin-top: -400px;}
+
 #div8 {-webkit-animation-timing-function: ease;margin-left: 500px;margin-top: -400px;}
 
 
+
+
+
 /* Standard syntax */
+
 #div1 {animation-timing-function: ease;}
+
 #div2 {animation-timing-function: ease;}
+
 #div3 {animation-timing-function:ease-in;}
+
     #div4 {animation-timing-function: ease;}
+
 #div5 {animation-timing-function: ease;}
+
 #div6 {animation-timing-function:ease-in;}
+
     #div7 {animation-timing-function: ease;}
+
 #div8 {animation-timing-function: ease;}
 
 
+
+
+
 /* Safari 4.0 - 8.0 */
+
 @-webkit-keyframes mymove {
+
     from {left: 0px;}
+
     to {left: 0px;}
+
 }
 
+
+
 /* Standard syntax */
+
 @keyframes mymove {
+
     from {left: 0px;}
+
     to {left: 100%;}
+
 }
+
     #wolk1{
+
         height: 500px;
+
         
+
     }
+
 </style>
+
 </head>
+
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 <script >
+
 //De speler laten bewegen
+
 $(document).keydown(function(e){
+
     switch (e.which){
+
     case 37:    //links
+
         $(".clark").finish().animate(
+
             
+
             {
+
             left: "-=20"
+
         });
+
         break;
+
     case 38:    //boven
+
             
+
             if(parseInt($("#clark").css("top"))>0){
+
               $(".clark").finish().animate({
+
             top: "-=20"
+
         });  
+
             }
+
         
+
         break;
+
     case 39:    //rechts
+
         $(".clark").finish().animate({
+
             left: "+=20"
+
         });
+
         break;
+
     case 40:    //beneden
+
                 if(parseInt($("#clark").css("bottom"))>0){
+
               $(".clark").finish().animate({
+
             top: "+=20"
+
         });
+
                 }
+
        
+
     }
+
 });
 
 
+
+
+
 </script>
+
 <body >
 
-
 <div id="wolken">
+
 <div id="div1" class="wolken"><img src="clouds2.png" id="wolk1"></div>
+
 <div id="div2"class="wolken"><img src="clouds2.png"id="wolk1"></div>
+
 <div id="div3"class="wolken"><img src="clouds2.png"id="wolk1"></div>
+
 <div id="div4" class="wolken"><img src="clouds2.png" id="wolk1"></div>
+
 <div id="div5"class="wolken"><img src="clouds2.png"id="wolk1"></div>
+
 <div id="div6"class="wolken"><img src="clouds2.png"id="wolk1"></div>
+
 <div id="div7" class="wolken"><img src="clouds2.png" id="wolk1"></div>
+
 <div id="div8"class="wolken"><img src="clouds2.png"id="wolk1"></div>
 
-
-
 </div>
+
 <div class="clark" id="clark"><img src="supermancape.png" style="margin: -1px; margin-left: -20px;height: 100px">
-<div class="linkerarm"></div>
-<div class="linkerhand"></div>
-<div class="hoofd"></div>
-<div class="rechterarm"></div>
-<div class="rechterhand"></div>
-<div class="linkerbeen"></div>
-<div class="rechterbeen"></div>
-</div>
 
+<div class="linkerarm"></div>
+
+<div class="linkerhand"></div>
+
+<div class="hoofd"></div>
+
+<div class="rechterarm"></div>
+
+<div class="rechterhand"></div>
+
+<div class="linkerbeen"></div>
+
+<div class="rechterbeen"></div>
+    
+</div>
+<div class="monster"><img src="monster.png" style="width: 100px;height: 100px" alt="monster2"></div>
+    <div class="monster2"><img src="monster.png" style="width: 100px;height: 100px" alt="monster2"></div>
 </body>
 </html>
