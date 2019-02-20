@@ -19,7 +19,7 @@ function myBlur(){
     document.getElementById("myImg").stle.WebkitFilter="blur(1.5rem)";
 }
 function myNormal(){
-        document.getElementById("myImg").style.filter= "normal(100%)";
+        document.getElementById("myImg").style.filter= "grayscale(0%)";
     
-    document.getElementById("myImg").stle.WebkitFilter="normal(100%)";
+    document.getElementById("myImg").stle.WebkitFilter="grayscale(0%)";
 }
