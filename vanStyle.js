@@ -1,6 +1,6 @@
-let img = document.querySelector('#img-car');
-let button=document.querySelector('#btn2');
-button.addEventListener('click',function(){
- if (img.classList.contains('GRAYSCALE')) img.classList.remove('NORMAL'); 
-  else img.classList.add('GRAYSCALE');
-});
+function myFunction(){
+    document.getElementById("myImg").style.filter= "grayscale(100%)";
+    
+    document.getElementById("myImg").stle.Webkitfilter="grayscale(100%)";
+}
+
