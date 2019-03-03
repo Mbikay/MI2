@@ -25,3 +25,26 @@
     // ...
   });
 })();
+//...
+
+    // listen to form submit
+    document.getElementById('login__form').addEventListener('submit', function(e) {
+      // halt event
+      e.preventDefault();
+      e.stopPropagation();
+
+      // all ok for now
+      let isValid = true;
+
+      // perform checks here
+      // ...
+
+      // draw conclusion
+      if (isValid) {
+        console.log('all ok');
+      } else {
+        console.log('form contains errors');
+      }
+    });
+
+    //...
