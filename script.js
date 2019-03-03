@@ -13,3 +13,15 @@
             });
     });
 })();
+;(function() {
+  'use strict';
+
+  // wait till DOM is loaded
+  window.addEventListener('load', function() {
+    // disable HTML5 form validation
+    document.getElementById('login__form').setAttribute('novalidate', 'novalidate');
+
+    // formchecking starts here
+    // ...
+  });
+})();
