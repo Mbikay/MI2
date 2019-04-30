@@ -4,9 +4,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
     <style>
+        body{
+            margin: 0;
+            background-color: darkblue;
+        }
+        
+/*---------------Media screen-----------------*/
+  /* If the screen size is 601px or more, width:100%, height:300px */
+@media only screen and (min-width: 601px) {
+   .amer{
+    width: 100%;
+       height: 200px;
+       position: relative;
+       top: 0;
+       left: 0;
+  }
+}
+
+/* If the screen size is 600px or less, width:100%*/
+@media only screen and (max-width: 600px) {
+   .amer{
+    width: 100%;
+       position: relative;
+       top: 0;
+       left: 0;
+  }
+}
+        @media only screen and(min-width:600px){
+            .trump{
+                top: 20px;
+                left: 200px;
+            }
+        }
+/*---------------Media screen-----------------*/
+
     
     </style>
 <body>
-    <img src="AmericaBack.gif" alt="amer" style="height: auto">
+<img src="AmericaBack.gif" alt="amer" class="amer">
+  <img src="TrumpFace.png" alt="trump" id="trump">
 </body>
 </html>
