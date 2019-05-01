@@ -30,18 +30,37 @@
        left: 0;
   }
 }
-        @media only screen and(min-width:600px){
-            .trump{
-                top: 20px;
-                left: 200px;
+@media only screen and (max-width: 600px) {
+             .trump{
+              position: relative;
+                top: 120px;
+                left: 10px;
+                 width: 150px
             }
         }
+@media only screen and (min-width: 600px) {
+             .trump{
+              position: relative;
+                top: 120px;
+                left: 10px;
+            }
+        }
+@media only screen and (min-width: 1200px) {
+             .trump{
+              position: relative;
+                top: 120px;
+                left: 200px;
+                 width: 400px;
+            }
+        }
+
+        
 /*---------------Media screen-----------------*/
 
     
     </style>
 <body>
 <img src="AmericaBack.gif" alt="amer" class="amer">
-  <img src="TrumpFace.png" alt="trump" id="trump">
+  <img src="TrumpFace.png" alt="trump" class="trump">
 </body>
 </html>
