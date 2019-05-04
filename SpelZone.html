@@ -3,7 +3,70 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-<style></style>
+<style>
+    body{
+        margin: 0;
+        background-color: #292929
+    }
+     .trump{
+ width: 100px;
+height: 100px;
+position: relative;
+-webkit-animation-name: Trump; /* Safari 4.0 - 8.0 */
+-webkit-animation-duration: 2s;
+        /* Safari 4.0 - 8.0*/
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0*/
+  animation-name: Trump;
+ animation-duration: 2s;
+ animation-iteration-count: infinite;
+    }
+     @-webkir-keyframes Trump{
+ 0% {left: 0px; top: 0px}
+ 25% {left: 200px; top: 0px}
+ 50% {left: 200px; top: 200px}
+75% {left: 0px; top: 200px}
+100% {left: 0px; top: 0px}
+    }
+    /* Standard syntax */
+    @keyframes Trump{
+ 0% {left: 0px; top: 0px}
+ 25% {left: 800px; top: 0px}
+ 50% {left: 200px; top: 200px}
+ 75% {left: 0px; top: 200px}
+100% {left: 0px; top: 0px}
+    }
+    .Trump2{
+    margin-top: -80px;
+ width: 100px;
+ height: 100px;
+ position: relative;
+ -webkit-animation-name: Trump2; /* Safari 4.0 - 8.0 */
+-webkit-animation-duration: 10s;
+        /* Safari 4.0 - 8.0*/
+-webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0*/
+ animation-name: Trump2;
+animation-duration: 10s;
+ animation-iteration-count: infinite;
+    }
+    /* Safari 4.0 - 8.0*/
+@-webkir-keyframes Trump2{
+ 0% {right: 800px; top: 0px}
+25% {right: -500px; top: 200px}
+50% {right: 200px; top: 200px}
+75% {right: 0px; top: 200px}
+100% {right: 0px; top: 0px}
+    }
+    /* Standard syntax */
+@keyframes Trump2{
+0% {right: 800px; top: -200px}
+25% {right: -500px; top: 200px}
+50% {right: -400px; top: 400px}
+75% {right: -200px; top: 0px}
+100% {right: -100px; top: 0px}
+    }
+    </style>
 <body>
+    <img src="TrumpFace.png" class="trump">
+    <img src="TrumpFace.png" class="Trump2">
     </body>
 </html>
