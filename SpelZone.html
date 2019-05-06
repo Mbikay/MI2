@@ -8,65 +8,65 @@
         margin: 0;
         background-color: #292929
     }
-     .trump{
- width: 100px;
-height: 100px;
-position: relative;
--webkit-animation-name: Trump; /* Safari 4.0 - 8.0 */
--webkit-animation-duration: 2s;
-        /* Safari 4.0 - 8.0*/
-  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0*/
-  animation-name: Trump;
- animation-duration: 2s;
- animation-iteration-count: infinite;
+    .column{
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        margin: 20px;
+        margin-top: 70px;
     }
-     @-webkir-keyframes Trump{
- 0% {left: 0px; top: 0px}
- 25% {left: 200px; top: 0px}
- 50% {left: 200px; top: 200px}
-75% {left: 0px; top: 200px}
-100% {left: 0px; top: 0px}
+    .row::after{
+        content: "";
+        clear: both;
+        display: table;
+        margin: 200px;
     }
-    /* Standard syntax */
-    @keyframes Trump{
- 0% {left: 0px; top: 0px}
- 25% {left: 800px; top: 0px}
- 50% {left: 200px; top: 200px}
- 75% {left: 0px; top: 200px}
-100% {left: 0px; top: 0px}
+    h1{
+font-size: 50px;
+    color: white;
     }
-    .Trump2{
-    margin-top: -80px;
- width: 100px;
- height: 100px;
- position: relative;
- -webkit-animation-name: Trump2; /* Safari 4.0 - 8.0 */
--webkit-animation-duration: 10s;
-        /* Safari 4.0 - 8.0*/
--webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0*/
- animation-name: Trump2;
-animation-duration: 10s;
- animation-iteration-count: infinite;
-    }
-    /* Safari 4.0 - 8.0*/
-@-webkir-keyframes Trump2{
- 0% {right: 800px; top: 0px}
-25% {right: -500px; top: 200px}
-50% {right: 200px; top: 200px}
-75% {right: 0px; top: 200px}
-100% {right: 0px; top: 0px}
-    }
-    /* Standard syntax */
-@keyframes Trump2{
-0% {right: 800px; top: -200px}
-25% {right: -500px; top: 200px}
-50% {right: -400px; top: 400px}
-75% {right: -200px; top: 0px}
-100% {right: -100px; top: 0px}
-    }
+    p{
+font-size: 20px;
+    color: white;}
+@media only screen and (max-width: 600px) {
+             .trump{
+                 width: 150px
+            }
+        }
+    @media only screen and (max-width: 600px) {
+             .clint{
+                 width: 150px;
+            }
+        }
+      @media only screen and (max-width: 600px) {
+             p{
+             font-size: 15px;
+            }
+        }
+    
     </style>
 <body>
-    <img src="TrumpFace.png" class="trump">
-    <img src="TrumpFace.png" class="Trump2">
+<h1>10 SECONDS</h1>
+    <div class="row">
+    <div class="column">
+        <p>CLICK TRUMP 20 TIMES</p>
+    <img src="TrumpFace.png" alt="trump" class="trump" id="trump">
+    
+   <p id="counted"></p>
+    </div>
+        <div class="column">
+            <p>CLICK CLINTON 5 TIMES</p>
+        <img src="Hillary.png" alt="clin" class="clint">
+        </div>
+    </div>
+
+   <script>
+       document.getElementById("trump").addEventListener("click",updateCounter, false);
+       var count=0;
+       function updateCounter(){
+           count++;
+           document.getElementById("counted").innerHTML=count+" "+"SMASH"
+       }
+    </script>
     </body>
 </html>
