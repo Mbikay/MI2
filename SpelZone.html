@@ -56,7 +56,9 @@ font-size: 20px;
     </div>
         <div class="column">
             <p>CLICK CLINTON 5 TIMES</p>
-        <img src="Hillary.png" alt="clin" class="clint">
+        <img src="Hillary.png" alt="clin" class="clint" id="clint">
+               <p id="smash"></p>
+
         </div>
     </div>
 
@@ -66,6 +68,12 @@ font-size: 20px;
        function updateCounter(){
            count++;
            document.getElementById("counted").innerHTML=count+" "+"SMASH"
+       }
+       document.getElementById("clint").addEventListener("click",updateClinton, false);
+       var count=0;
+       function updateClinton(){
+           count++;
+           document.getElementById("smash").innerHTML=count+" "+"SMASH"
        }
     </script>
     </body>
