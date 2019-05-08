@@ -16,36 +16,58 @@
         margin-top: 70px;
     }
     .row::after{
-        content: "";
         clear: both;
         display: table;
-        margin: 200px;
     }
     h1{
 font-size: 50px;
     color: white;
     }
-    p{
-font-size: 20px;
-    color: white;}
+
 @media only screen and (max-width: 600px) {
              .trump{
                  width: 150px
             }
         }
-    @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
              .clint{
                  width: 150px;
             }
         }
-      @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
              p{
              font-size: 15px;
             }
         }
+@media only screen and (min-width: 600px) {
+        .column{
+     float: left;
+  width: 33.33%;
+  padding: 10px;
+            margin-left: 100px;
+    }
+    p{
+        font-size: 20px;
+        color: white;
+    }
+    row:after{
+        clear: both;
+        display: block;
+    }
+  
+           
+        }
+    .button{
+        background-color: green;
+        color: white;
+        padding: 15px 32px;
+        display:  none;
+    }
     
     </style>
 <body>
+<div id="countdown"></div>
+
 <h1>10 SECONDS</h1>
     <div class="row">
     <div class="column">
@@ -61,9 +83,12 @@ font-size: 20px;
 
         </div>
     </div>
+    <button class="button" id="butt">Next Level</button>
 
    <script>
-       document.getElementById("trump").addEventListener("click",updateCounter, false);
+//Wanneer je op img's klikt = Starten van het count element
+//**--------------------------------------**
+document.getElementById("trump").addEventListener("click",updateCounter, false);
        var count=0;
        function updateCounter(){
            count++;
@@ -75,6 +100,25 @@ font-size: 20px;
            count++;
            document.getElementById("smash").innerHTML=count+" "+"SMASH"
        }
+       var button = document.getElementById("butt");
+       var c=confirm("Next Level ==>");
+       if(c){
+           button.style.display='block';
+           
+       }
+//**--------------------Timer-----------**
+  var timeleft = 10;
+var downloadTimer = setInterval(function(){
+  document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+  timeleft -= 1;
+  if(timeleft <= 0 && count !=20){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").html;
+     setTimeout(function(){window.location.href='SpelZone.html'},5000);
+      
+  }
+}, 1000);
+ 
     </script>
     </body>
 </html>
