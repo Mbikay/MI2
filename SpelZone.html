@@ -1,124 +1,121 @@
 <! doctype HTML>
-<html>
-<head>
- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-<style>
-    body{
-        margin: 0;
-        background-color: #292929
-    }
-    .column{
-        float: left;
-        width: 33.33%;
-        padding: 5px;
-        margin: 20px;
-        margin-top: 70px;
-    }
-    .row::after{
-        clear: both;
-        display: table;
-    }
-    h1{
-font-size: 50px;
-    color: white;
-    }
+    <style>
+        body {
+            margin: 0;
+            background-color: antiquewhite
+        }
 
-@media only screen and (max-width: 600px) {
-             .trump{
-                 width: 150px
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            margin: 20px;
+            margin-top: 70px;
+        }
+
+        .row::after {
+            clear: both;
+            display: table;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: white;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .trump {
+                width: 150px
             }
         }
-@media only screen and (max-width: 600px) {
-             .clint{
-                 width: 150px;
+
+        @media only screen and (max-width: 600px) {
+            .clint {
+                width: 150px;
             }
         }
-@media only screen and (max-width: 600px) {
-             p{
-             font-size: 15px;
+
+        @media only screen and (max-width: 600px) {
+            p {
+                font-size: 15px;
             }
         }
-@media only screen and (min-width: 600px) {
-        .column{
-     float: left;
-  width: 33.33%;
-  padding: 10px;
-            margin-left: 100px;
-    }
-    p{
-        font-size: 20px;
-        color: white;
-    }
-    row:after{
-        clear: both;
-        display: block;
-    }
-  
-           
+
+        @media only screen and (min-width: 600px) {
+            .column {
+                float: left;
+                width: 33.33%;
+                padding: 10px;
+                margin-left: 100px;
+            }
+
+            p {
+                font-size: 50px;
+                color: black;
+            }
+
+            row:after {
+                clear: both;
+                display: block;
+            }
+
+
         }
-    .button{
-        background-color: green;
-        color: white;
-        padding: 15px 32px;
-        display:  none;
-    }
-    
+
     </style>
-<body>
-<div id="countdown"></div>
 
-<h1>10 SECONDS</h1>
-    <div class="row">
-    <div class="column">
+    <body>
+        <div id="countdown"></div>
         <p>CLICK TRUMP 20 TIMES</p>
-    <img src="TrumpFace.png" alt="trump" class="trump" id="trump">
-    
-   <p id="counted"></p>
-    </div>
-        <div class="column">
-            <p>CLICK CLINTON 5 TIMES</p>
-        <img src="Hillary.png" alt="clin" class="clint" id="clint">
-               <p id="smash"></p>
+        <img src="TrumpFace.png" alt="trump" class="trump" id="trump" onclick="myFunction()">
 
-        </div>
-    </div>
-    <button class="button" id="butt">Next Level</button>
+        <p id="counted"></p>
 
-   <script>
-//Wanneer je op img's klikt = Starten van het count element
-//**--------------------------------------**
-document.getElementById("trump").addEventListener("click",updateCounter, false);
-       var count=0;
-       function updateCounter(){
-           count++;
-           document.getElementById("counted").innerHTML=count+" "+"SMASH"
-       }
-       document.getElementById("clint").addEventListener("click",updateClinton, false);
-       var count=0;
-       function updateClinton(){
-           count++;
-           document.getElementById("smash").innerHTML=count+" "+"SMASH"
-       }
-       var button = document.getElementById("butt");
-       var c=confirm("Next Level ==>");
-       if(c){
-           button.style.display='block';
-           
-       }
-//**--------------------Timer-----------**
-  var timeleft = 10;
-var downloadTimer = setInterval(function(){
-  document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
-  timeleft -= 1;
-  if(timeleft <= 0 && count !=20){
-    clearInterval(downloadTimer);
-    document.getElementById("countdown").html;
-     setTimeout(function(){window.location.href='SpelZone.html'},5000);
-      
-  }
-}, 1000);
- 
-    </script>
+        <script>
+            //Wanneer je op img's klikt = Starten van het count element
+            //**--------------------------------------**
+            document.getElementById("trump").addEventListener("click", updateCounter, false);
+            var count = 0;
+
+            function updateCounter() {
+                count++;
+                document.getElementById("counted").innerHTML = count + " " + "SMASH";
+                if (count == 20) {
+                    clearInterval(downloadTimer);
+
+                    var retVal = confirm("Do you want to continue ?");
+                    if (retVal == true) {
+                       window.location = "scratch.html";
+                        return true;
+                    } else {
+                        document.write("User does not want to continue!");
+                        return false;
+                    }
+                }
+            }
+
+
+
+            var timeleft = 10;
+            var downloadTimer = setInterval(function() {
+                document.getElementById("countdown").innerHTML = timeleft + " SECONDS REMAINING";
+                timeleft -= 1;
+                if (timeleft <= 0) {
+                    clearInterval(downloadTimer);
+                    document.getElementById("countdown").html;
+                    setTimeout(function() {
+                        window.location.href = 'SpelZone.html'
+                    }, 5000);
+
+                }
+            }, 1000);
+
+        </script>
     </body>
-</html>
+
+    </html>
