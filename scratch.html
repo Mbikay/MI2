@@ -80,8 +80,8 @@
     </style>
 <body>
 <img src="AmericaBack.gif" alt="amer" class="amer">
-  <img src="TrumpFace.png" alt="trump" class="trump">
-    <img src="Hillary.png" class="clint">
+  <img src="TrumpFace.png" alt="trump" class="trump" onmouseover="over(this);" onmouseout="unover(this);">
+    <img src="Hillary.png" class="clint" onmouseover="oever(this);" onmouseout="unoever(this);">
     <img src="obama.png" alt="obam" class="obama" onmouseover="hover(this);" onmouseout="unhover(this);">
     <a href="SpelZone.html"><button class="start">START GAME</button></a>
     <script>
@@ -91,6 +91,18 @@
         function unhover(element) {
   element.setAttribute('src', 'obama.png');
 }
+        function over(crazyTrump){
+ crazyTrump.setAttribute('src','crazyTrump.gif');
+        }
+        function unover(crazyTrump){
+            crazyTrump.setAttribute('src','TrumpFace.png');
+        }
+        function oever(crazyClint){
+            crazyClint.setAttribute('src','crazyClint.png');
+        }
+        function unoever(crazyClint){
+            crazyClint.setAttribute('src','Hillary.png')
+        }
     </script>
 </body>
 </html>
