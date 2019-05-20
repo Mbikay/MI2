@@ -29,30 +29,14 @@
        top: 0;
        left: 0;
   }
-}
-@media only screen and (max-width: 600px) {
-             .trump{
+                 .trump{
               position: relative;
                 top: 120px;
                 left: 10px;
                  width: 150px
             }
-        }
-@media only screen and (min-width: 600px) {
-             .trump{
-              position: relative;
-                top: 120px;
-                left: 10px;
-            }
-        }
-@media only screen and (min-width: 1200px) {
-             .trump{
-              position: relative;
-                top: 120px;
-                left: 200px;
-                 width: 400px;
-            }
-        }
+}
+
 @media only screen and (min-width: 1200px) {
     .start{
         box-shadow: 0 9px #999;
@@ -67,10 +51,23 @@
             display: inline-block;
             text-decoration: none;
             cursor: pointer;
-            left: 400px;
+            left: 40px;
             position: relative;
         top: -170px;
         }
+     .trump{
+              position: relative;
+                left: 20px;
+                 width: 300px;
+            }
+    .clint{
+        float: left;
+        width: 300px;
+    }
+    .obama{
+        float: left;
+        width: 300px;
+    }
     
         }
 
@@ -84,6 +81,16 @@
 <body>
 <img src="AmericaBack.gif" alt="amer" class="amer">
   <img src="TrumpFace.png" alt="trump" class="trump">
-    <button class="start">START GAME</button>
+    <img src="Hillary.png" class="clint">
+    <img src="obama.png" alt="obam" class="obama" onmouseover="hover(this);" onmouseout="unhover(this);">
+    <a href="SpelZone.html"><button class="start">START GAME</button></a>
+    <script>
+    function hover(element) {
+  element.setAttribute('src', 'giphyOba.gif');
+}
+        function unhover(element) {
+  element.setAttribute('src', 'obama.png');
+}
+    </script>
 </body>
 </html>
