@@ -1,8 +1,8 @@
-<!DOCTYPE HTML >
-<html>
+<! doctype HTML>
+    <html>
+
     <head lang="en">
-    <title>Level3</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
     body {
@@ -10,84 +10,406 @@
         background-color: antiquewhite
     }
 
-    h3 {
-        font-size: 15px
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        margin: 20px;
+        margin-top: 70px;
+    }
+
+    .row::after {
+        clear: both;
+        display: table;
+    }
+
+    h1 {
+        font-size: 50px;
+        color: white;
+    }
+
+
+    .bew {
+
+        position: relative;
+        -webkit-animation-name: example;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 2s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-iteration-count: 2;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-direction: alternate;
+        /* Safari 4.0 - 8.0 */
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes example {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            left: 200px;
+            top: 0px;
+        }
+
+        50% {
+            left: 200px;
+            top: 200px;
+        }
+
+        75% {
+            left: 0px;
+            top: 200px;
+        }
+
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    /* Standard syntax */
+    @keyframes example {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            left: 40px;
+            top: 30px;
+        }
+
+        25% {
+            left: 250px;
+            top: 200px;
+        }
+
+        50% {
+            left: 20px;
+            top: 100px;
+        }
+
+        75% {
+            left: 110px;
+            top: 200px;
+        }
+
+        100% {
+            left: 300px;
+            top: 130px;
+        }
+    }
+
+    .bow {
+
+        position: relative;
+        -webkit-animation-name: example2;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 2s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-iteration-count: 2;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-direction: alternate;
+        /* Safari 4.0 - 8.0 */
+        animation-name: example2;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes example2 {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            left: 200px;
+            top: 0px;
+        }
+
+        50% {
+            left: 200px;
+            top: 200px;
+        }
+
+        75% {
+            left: 0px;
+            top: 200px;
+        }
+
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    /* Standard syntax */
+    @keyframes example2 {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            right: 40px;
+            top: 30px;
+        }
+
+        25% {
+            left: 450px;
+            top: 200px;
+        }
+
+        50% {
+            right: 420px;
+            top: 100px;
+        }
+
+        75% {
+            right: 110px;
+            top: 200px;
+        }
+
+        100% {
+            right: 300px;
+            bottom: 130px;
+        }
+    }
+
+    /* If the screen size is 600px or less, width:100%*/
+
+    @media only screen and (max-width: 568px) {
+        .clint {
+            width: 70px;
+            float: right;
+            margin-right: 260px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .count1 {
+            font-size: 20px;
+            float: left
+        }
+
+        .count2 {
+            font-size: 20px;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .clint {
+            width: 200px;
+            float: right;
+            margin-right: 560px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 60px;
+        }
+
+        .count1 {
+            font-size: 60px;
+            float: left
+        }
+
+        .count2 {
+            font-size: 60px;
+        }
+    }
+
+    @media only screen and (min-width:1200px) {
+        .clint {
+            width: 200px;
+            float: left;
+            margin-left: 160px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        .count1 {
+            font-size: 30px;
+            float: left;
+        }
+
+        .count2 {
+            font-size: 30px;
+        }
+    }
+
+    .bara {
+
+        position: relative;
+        -webkit-animation-name: barack;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 1s;
+        /* Safari 4.0 - 8.0 */
+        animation-name: barack;
+        animation-iteration-count: infinite;
+    }
+
+
+    /* Standard syntax */
+    @keyframes barack {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        z 25% {
+            left: 800px;
+            top: 0px;
+        }
+
+        50% {
+            right: 800px;
+            top: 100px;
+        }
+
+        75% {
+            left: 0px;
+            top: 0px;
+        }
+
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    .dona {
+
+        position: relative;
+        -webkit-animation-name: donald;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-iteration-count: 2;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-direction: alternate;
+        /* Safari 4.0 - 8.0 */
+        animation-name: donald;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+
+
+    /* Standard syntax */
+    @keyframes donald {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            left: 400px;
+            top: 0px;
+        }
+
+        50% {
+            left: 400px;
+            top: 600px;
+        }
+
+        75% {
+            left: 0px;
+            top: 500px;
+        }
+
+        100% {
+            left: 200px;
+            top: 0px;
+        }
     }
 </style>
 
 <body>
-    <form action="level3.php" method="post" id="quiz">
-        <ol>
-            <li>
-                <h3>Who was the 42nd president of the United States?</h3>
-                <div>
-                    <input type="radio" value="A" name="vraag-1-kansen" id="vraag-1-antwoord-A">
-                    <label for="vraag-1-antwoord-A">A) Bill Clinton</label>
-                </div>
-                <div>
-                    <input type="radio" value="B" name="vraag-1-kansen" id="vraag-1-antwoord-B">
-                    <label for="vraag-1-antwoord-b">B) Barack Obama</label>
-                </div>
-                <div>
-                    <input type="radio" value="C" name="vraag-1-kansen" id="vraag-1-antwoord-C">
-                    <label for="vraag-1-antwoord-C">C) George W.Bush</label>
-                </div>
-            </li>
-            <li>
-                <h3>How many flags on the US flag?</h3>
-                <div>
-                    <input type="radio" value="A" name="vraag-2-kansen" id="vraag-2-antwoord-A">
-                    <label for="vraag-2-antwoord-A">A) 46</label>
-                </div>
-                  <div>
-                    <input type="radio" value="B" name="vraag-2-kansen" id="vraag-2-antwoord-B">
-                    <label for="vraag-2-antwoord-B">B) 43</label>
-                </div>
-                  <div>
-                    <input type="radio" value="C" name="vraag-2-kansen" id="vraag-2-antwoord-C">
-                    <label for="vraag-2-antwoord-C">C) 50</label>
-                </div>
-                  <div>
-                    <input type="radio" value="D" name="vraag-2-kansen" id="vraag-2-antwoord-D">
-                    <label>D) 49</label>
-                </div>
-            </li>
-            <li>
-                <h3>Who was the first person to walk on the moon?</h3>
-                <div>
-                    <input type="radio" value="A" name="vraag-2-kansen">
-                    <label>A) John Glenn</label>
-                </div>
-                  <div>
-                    <input type="radio" value="B" name="vraag-2-kansen">
-                    <label>B) Clint Eastwood</label>
-                </div>
-                  <div>
-                    <input type="radio" value="C" name="vraag-2-kansen">
-                    <label>C) Neil Armstrong</label>
-                </div>
-                  <div>
-                    <input type="radio" value="D" name="vraag-2-kansen">
-                    <label>D) Yuri Gagarin</label>
-                </div>
-            </li>
-            <li>Touch trump 5 times </li>
-        </ol>
-    </form>
-                <input type="submit" value="Submit Quiz" />
+    <div id="countdown" class="count2"></div>
+    <p>CLICK CLINTON 60 TIMES</p>
+
+    <div class="bew"><img src="Hillary.png" alt="trump" class="clint" id="trump"></div>
+    <p id="counted" class="count1"></p>
+    <p style="float: left;margin-top: 600px">CLICK OBAMA 10 TIMES </p>
+    <div class="bara"><img src="obama.png" class="clint" id="barack"></div>
+    <p class="count1" id="optell"></p>
+    <p style="float: left;margin-top: 600px">CLICK TRUMP 20 TIMES</p>
+    <div class="dona"><img src="TrumpFace.png" alt="trump" class="clint"></div>
 
     <script>
-    	<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	var pageTracker = _gat._getTracker("UA-68528-29");
-	pageTracker._initData();
-	pageTracker._trackPageview();
-	</script>
-</body>
-</html>
+        //Wanneer je op img's klikt = Starten van het count element
+        //**--------------------------------------**
+        document.getElementById("trump").addEventListener("click", updateCounter, false);
+        var count = 0;
+        document.getElementById("barack").addEventListener("click", updateTeller, false);
+        var teller = 0;
+
+
+
+        function updateCounter() {
+            count++;
+            document.getElementById("counted").innerHTML = count + " " + "SMASH";
+
+
+            if (count == 25) {
+                document.getElementById("trump").style.display = "none";
+                Document.getElementById("counted").innerHTML = "SCROLL DOWN !";
+            }
+        }
+
+        function updateTeller() {
+            teller++;
+            document.getElementById("optell").innerHTML = teller + "" + "SMASH";
+            if (teller == 10) {
+                document.getElementById("barack").style.display = "none";
+                clearInterval(downloadTimer);
+
+                var retVal = confirm("You won ! Go To Level 2 ==>");
+                if (retVal == true) {
+                    window.location = "Level2.html";
+                    return true;
+                } else {
+                    document.write("User does not want to continue!");
+                    return false;
+                }
+            }
+
+        }
+
+
+
+        //--------------------------TIMER----------------------------------------------
+        //**--------------------------------------**
+        var timeleft = 60;
+        var downloadTimer = setInterval(function() {
+            document.getElementById("countdown").innerHTML = timeleft + " SECONDS REMAINING";
+            timeleft -= 1;
+            if (timeleft == 0) {
+                clearInterval(downloadTimer);
+                document.getElementById("countdown").html;
+                alert("This is a warning message!");
+                setTimeout(function() {
+                    window.location.href = 'Level2.html'
+                }, 1000);
+
+            }
+        }, 1000);
+    </script>
+</body></html>
