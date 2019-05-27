@@ -2,88 +2,101 @@
     <html>
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <style>
-        body {
-            margin: 0;
-            background-color: antiquewhite
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: antiquewhite
+    }
+
+
+    h1 {
+        font-size: 50px;
+        color: white;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .trump {
+            width: 200px;
+            float: right;
+            margin-right: 100px;
+            margin-top: 200px;
         }
 
-      
-        h1 {
+        p {
+            font-size: 30px;
+        }
+
+        .count1 {
             font-size: 50px;
-            color: white;
+            float: left
+        }
+    }
+
+    @media only screen and (min-width:700px) {
+        .count1 {
+            font-size: 40px;
+            float: left;
         }
 
-        @media only screen and (max-width: 600px) {
-            .trump {
-                width: 200px;
-                float: right;
-                margin-right: 100px;
-                margin-top: 200px;
+        .count2 {
+            font-size: 100px;
+            margin-left: 500px;
+        }
+           p {
+                font-size: 60px;
+               margin-left: 500px;
             }
-            p {
-                font-size: 30px;
-            }
-            .count1{
-                font-size: 50px;
-                float: left
+    }
+</style>
+
+<body>
+    <div id="countdown" class="count2"></div>
+    <p >CLICK TRUMP 20 TIMES</p>
+    <img src="TrumpFace.png" alt="trump" class="trump" id="trump" onclick="myFunction()">
+
+    <p id="counted" class="count1"></p>
+
+    <script>
+        //Wanneer je op img's klikt = Starten van het count element
+        //**--------------------------------------**
+        document.getElementById("trump").addEventListener("click", updateCounter, false);
+        var count = 0;
+
+        function updateCounter() {
+            count++;
+            document.getElementById("counted").innerHTML = count + " " + "SMASH";
+            if (count == 20) {
+                clearInterval(downloadTimer);
+
+                var retVal = confirm("You won ! Go To Level 2 ==>");
+                if (retVal == true) {
+                    window.location = "Level2.html";
+                    return true;
+                } else {
+                    document.write("User does not want to continue!");
+                    return false;
+                }
             }
         }
 
 
-    </style>
 
-    <body>
-        <div id="countdown"></div>
-        <p>CLICK TRUMP 20 TIMES</p>
-        <img src="TrumpFace.png" alt="trump" class="trump" id="trump" onclick="myFunction()">
+        var timeleft = 10;
+        var downloadTimer = setInterval(function() {
+            document.getElementById("countdown").innerHTML = timeleft + " SECONDS REMAINING";
+            timeleft--;
+            if (timeleft <= 0) {
+                clearInterval(downloadTimer);
+                document.getElementById("countdown").html;
+                alert("This is a warning message!");
+                document.write("This is a warning message!");
+                setTimeout(function() {
+                    window.location.href = 'SpelZone.html'
+                }, 1000);
 
-        <p id="counted" class="count1"></p>
-
-        <script>
-            //Wanneer je op img's klikt = Starten van het count element
-            //**--------------------------------------**
-            document.getElementById("trump").addEventListener("click", updateCounter, false);
-            var count = 0;
-
-            function updateCounter() {
-                count++;
-                document.getElementById("counted").innerHTML = count + " " + "SMASH";
-                if (count == 20) {
-                    clearInterval(downloadTimer);
-
-                    var retVal = confirm("You won ! Go To Level 2 ==>");
-                    if (retVal == true) {
-                       window.location = "scratch.html";
-                        return true;
-                    } else {
-                        document.write("User does not want to continue!");
-                        return false;
-                    }
-                }
             }
-
-
-
-            var timeleft = 7;
-            var downloadTimer = setInterval(function() {
-                document.getElementById("countdown").innerHTML = timeleft + " SECONDS REMAINING";
-                timeleft -= 1;
-                if (timeleft == 0) {
-                    clearInterval(downloadTimer);
-                    document.getElementById("countdown").html;
-                    alert ("This is a warning message!");
-               document.write ("This is a warning message!");
-                    setTimeout(function() {
-                        window.location.href = 'SpelZone.html'
-                    }, 10);
-
-                }
-            }, 1000);
-
-        </script>
-    </body>
-
-    </html>
+        }, 1000);
+    </script>
+</body></html>
